@@ -49,6 +49,32 @@ footer {
     color: #FFFFFF;
 }
 
+/* Button styles */
+/* Button grid styles */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Spacing between buttons */
+    justify-items: center; /* Center buttons within their grid cells */
+    margin: 20px 0;
+}
+
+.big-button {
+    background-color: #009ece; /* light blue */
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 180px; /* Fixed width for buttons */
+    transition: background-color 0.3s ease;
+}
+
+.big-button:hover {
+    background-color: #008080; /* Teal on hover */
+}
+
 /* Mobile Styles */
 @media screen and (max-width: 600px) {
     header, footer {
@@ -79,5 +105,15 @@ footer {
         position: static;
         padding: 15px;
         font-size: 16px;
+    }
+    .button-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+        gap: 10px; /* Reduce gap to save space */
+    }
+
+    .big-button {
+        width: 140px; /* Reduce button width on small screens */
+        padding: 15px; /* Reduce padding to prevent overlap */
+        font-size: 18px; /* Slightly smaller font size */
     }
 }
