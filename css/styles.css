@@ -1,13 +1,18 @@
+/* styles.css */
+
+/* Basic reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #FFFFFF; /* White background */
+    color: #333333; /* Charcoal text color */
 }
 
-header {
-    background: #333;
-    color: #fff;
+header, footer {
+    background-color: #008080; /* Teal */
+    color: #FFFFFF;
     padding: 10px 20px;
     text-align: center;
 }
@@ -23,8 +28,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff; /* Dark Cyan */
     text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 main {
@@ -33,12 +42,42 @@ main {
 }
 
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
     position: fixed;
     width: 100%;
     bottom: 0;
+    background-color: #008080; /* Teal footer */
+    color: #FFFFFF;
 }
 
+/* Mobile Styles */
+@media screen and (max-width: 600px) {
+    header, footer {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    nav ul {
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    footer {
+        position: static;
+        padding: 15px;
+        font-size: 16px;
+    }
+}
